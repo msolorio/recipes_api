@@ -44,7 +44,7 @@ async function show(req, res) {
 
 async function create(req, res) {
   console.log('Hit posts create controller');
-  const newPost = { city, title, body, postImg } = req.body;
+  const newPost = { city, postTitle, postBody, postImg } = req.body;
 
   try {
     const createdPost = await Post.create(newPost);

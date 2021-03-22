@@ -23,7 +23,18 @@ async function create(req, res) {
   res.send(createdCity);
 }
 
+async function show(req, res) {
+  City.findById(req.params.cityId)
+    .populate('posts')
+    .exec()
+    .then((foundCity) => res.send(foundCity))
+    .catch((err) => {
+      console.log('Error finding city by id:', err);
+    });
+}
+
 module.exports = {
   index,
-  create
+  create,
+  show
 };
