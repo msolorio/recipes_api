@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const {
-  citiesRoutes,
-  postsRoutes
+  categoriesRoutes,
+  recipesRoutes
 } = require('./routes');
 
 // MIDDLEWARE
@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // ROUTES
-app.use('/cities', citiesRoutes);
-app.use('/posts', postsRoutes);
+app.use('/categories', categoriesRoutes);
+app.use('/recipes', recipesRoutes);
 
 app.get('/', (req, res) => {
   res.send('A response');

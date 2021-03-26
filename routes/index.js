@@ -1,7 +1,7 @@
-const citiesRoutes = require('./citiesRoutes');
-const postsRoutes = require('./postsRoutes');
+const categoriesRoutes = require('./categoriesRoutes');
+const recipesRoutes = require('./recipesRoutes');
 
 module.exports = {
-  citiesRoutes,
-  postsRoutes
+  categoriesRoutes,
+  recipesRoutes
 };

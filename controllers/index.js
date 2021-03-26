@@ -1,4 +1,4 @@
 module.exports = {
-  citiesCtrl: require('./citiesController'),
-  postsCtrl: require('./postsController')
+  categoriesCtrl: require('./categoriesController'),
+  recipesCtrl: require('./recipesController')
 };
